@@ -51,7 +51,7 @@ if __name__ == '__main__':
     model.train()
     for epoch in range(epochs):
         for images, labels in tqdm(train_dl, desc=f'Epoch {epoch+1}'):
-            images, labels = images.to('cuda'), labels.to('cuda')
+            images, labels = images.to(device), labels.to(device)
             optimizer.zero_grad()
             outputs = model(images)
             loss = criterion(outputs, labels)
