@@ -8,6 +8,7 @@ from tqdm.auto import tqdm
 
 from torchvision import datasets
 
+
 tfm = v2.Compose([
     v2.RandomResizedCrop(size=(32, 32), antialias=True),
     v2.RandomHorizontalFlip(p=0.5),
